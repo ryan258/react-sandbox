@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Lottery from './components/Lottery/Lottery'
+import LotteryBall from './components/Lottery/LotteryBall'
+import RandomNumber from './components/RandomNumber'
+import ScoreKeeper from './components/ScoreKeeper'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Sandbox</h1>
+      <div className="component-example-container">
+        <h2>RandomNumber Component</h2>
+        <RandomNumber />
+      </div>
+      <div className="component-example-container">
+        <h2>ScoreKeeper</h2>
+        <ScoreKeeper />
+      </div>
+      <div className="component-example-container">
+        <h2>Lottery</h2>
+        <Lottery />
+        <Lottery title="Monster Lotto!" maxBalls={3} maxNum={9} />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
