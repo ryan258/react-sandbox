@@ -25,7 +25,7 @@ export default class ScoreKeeper extends Component {
     this.setState((currentState) => ({ score: currentState.score + 1 }))
   }
 
-  // abstracting state updates
+  // abstracting state updates - preferrable, makes things easier to test
   incrementScore(currState) {
     return { score: currState.score + 1 }
   }

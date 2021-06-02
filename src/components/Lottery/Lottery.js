@@ -6,7 +6,7 @@ import './Lottery.css'
 export default class Lottery extends Component {
   //! 1.) Start w/ default props!
   static defaultProps = {
-    title: 'A Lotto...',
+    title: 'Default Lotto (all defaultProps)',
     maxBalls: 6,
     maxNum: 40
   }
@@ -40,8 +40,8 @@ export default class Lottery extends Component {
         {/* //! 3a.) Generate Title */}
         <h1>{this.props.title}</h1>
         {/* //! 3b.) Generate all the balls */}
-        {this.state.nums.map((n) => (
-          <LotteryBall num={n} />
+        {this.state.nums.map((n, i) => (
+          <LotteryBall key={i} num={n} />
         ))}
         {/* //! 3c.) Wire up the button */}
         <button onClick={this.handleClick}>Generate</button>

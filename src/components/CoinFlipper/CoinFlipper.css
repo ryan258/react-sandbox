@@ -1,0 +1,11 @@
+.CoinFlipper {
+  background-color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CoinFlipper__Coin {
+  width: 175px;
+  height: 175px;
+}
